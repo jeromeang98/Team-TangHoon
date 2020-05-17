@@ -1,0 +1,1568 @@
+Wdwpage:
+    Initial_page:
+    Login:
+    Loginwelcome:
+    Signup:
+    Signupwelcome:
+    Expenses:
+    Razerpay:
+    Scan:
+    QRcode:
+    Transfer:
+    Pocket:
+    Transaction:
+    Expendituresum:
+    Finance:
+    Profile:
+    Investmenttopics:
+ 
+<BackgroundColor@Widget>:
+    background_color: 1,1,1,1
+    canvas.before:
+        Color: 
+            rgba: root.background_color
+        Rectangle: 
+            size: self.size
+            pos: self.pos
+<BackgroundLabel@Label+BackgroundColor>:
+    background_color: 0,0,0,0
+ 
+<Initial_page>: 
+    name: "initial"
+ 
+    FloatLayout:
+        BackgroundLabel:
+            text: "Razer Buddy"
+            font_size: 40
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.45
+            pos_hint: {"x":0, "top":1}
+        
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.3, 0.55
+            pos_hint: {"x":0, "top":0.55}
+ 
+        Button:
+            text: "Log In"
+            font_size: 24
+            color: 0.02,0.02,0.02,1
+            background_color: 0.95,0.95,0.95,1
+            size_hint: 0.4, 0.1
+            pos_hint: {"x":0.3, "top":0.55}
+            on_release: 
+                app.root.current = "Login"
+ 
+        BackgroundLabel: 
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.4, 0.1
+            pos_hint: {"x":0.3, "top":0.45}
+        
+        Button:
+            text: "Sign Up"
+            font_size: 24
+            color: 0.02,0.02,0.02,1
+            background_color: 0.95,0.95,0.95,1
+            size_hint: 0.4, 0.1
+            pos_hint: {"x":0.3, "top":0.35}
+            on_release: 
+                app.root.current = "Signup"
+ 
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.4, 0.25
+            pos_hint: {"x":0.3, "top":0.25}
+        
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.3, 0.55
+            pos_hint: {"x":0.7, "top":0.55}
+ 
+<Login>:
+    name: "Login"
+ 
+    FloatLayout:
+        BackgroundLabel:
+            text: "Razer Buddy"
+            font_size: 35
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.3
+            pos_hint: {"x":0, "top":1}
+        
+        FloatLayout:
+            size_hint: 1, 0.3
+            pos_hint: {"x":0, "top":0.7}
+ 
+            BackgroundLabel:
+                text: "Login"
+                font_size: 24
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.35
+                pos_hint: {"x":0, "top":1}
+            BackgroundLabel:
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.55, 0.35
+                pos_hint: {"x":0.45, "top":1}
+ 
+            BackgroundLabel:
+                text: "6 Digit Pin:"
+                font_size: 18
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.30
+                pos_hint: {"x":0, "top":0.65}
+            TextInput:
+                id: username
+                multiline: False
+                font_size: 18
+                size_hint: 0.42, 0.30
+                pos_hint: {"x":0.45, "top":0.65}
+            BackgroundLabel:
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.13, 0.30
+                pos_hint: {"x":0.87, "top":0.65}
+                
+            BackgroundLabel:
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.35, 0.35
+                pos_hint: {"x":0, "top":0.35}  
+            Button:
+                text: "SUBMIT"
+                font_size: 24
+                color: 0.02,0.02,0.02,1
+                background_color: 0.95,0.95,0.95,1
+                size_hint: 0.3, 0.35
+                pos_hint: {"x":0.35, "top":0.35}
+                on_release: app.root.current = "Loginwelcome"
+            BackgroundLabel:
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.35, 0.35
+                pos_hint: {"x":0.65, "top":0.35}
+        
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.4
+            pos_hint: {"x":0, "top":0.4}
+ 
+<Loginwelcome>: 
+    name: "Loginwelcome"
+    FloatLayout:
+        BackgroundLabel:
+            text: "Razer Buddy"
+            font_size: 45
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.5
+            pos_hint: {"x":0, "top":1}
+        BackgroundLabel:
+            text: "Welcome Back"
+            font_size: 35
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.07
+            pos_hint: {"x":0, "top":0.5}
+        BackgroundLabel:
+            text: "Dan low!"
+            font_size: 35
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.07
+            pos_hint: {"x":0, "top":0.43}
+        BackgroundLabel:
+            size_hint: 1, 0.29
+            pos_hint: {"x":0, "top":0.36}
+            background_color: 0.15,0.95,0.35,1
+        Button:
+            text: "Continue"
+            color: 0.15,0.15,0.15,1
+            font_size: 18
+            background_color: 1,1,1,1
+            size_hint: 1, 0.07
+            pos_hint: {"x":0, "top":0.07}
+            on_release: app.root.current = "Expenses"
+ 
+<Signup>:
+    name: "Signup"
+ 
+    FloatLayout:
+        BackgroundLabel: 
+            text: "Razer Buddy"
+            font_size: 24
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.1
+            pos_hint: {"x":0, "top":1}
+        
+        BackgroundLabel: 
+            text: "Sign Up"
+            font_size: 18
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.5, 0.07
+            pos_hint: {"x":0, "top":0.9}
+        
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.5, 0.07
+            pos_hint: {"x":0.5, "top":0.9}
+        
+        FloatLayout:
+            size_hint: 1, 0.7
+            pos_hint: {"x":0, "top":0.83}
+ 
+            BackgroundLabel: 
+                text: "Name:"
+                font_size: 13
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.1
+                pos_hint: {"x":0, "top":1}
+            TextInput: 
+                id: name
+                multiline: False
+                font_size: 13
+                size_hint: 0.55, 0.1
+                pos_hint: {"x":0.45, "top":1}
+            
+            BackgroundLabel: 
+                text: "Username:"
+                font_size: 13
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.1
+                pos_hint: {"x":0, "top":0.9}
+            TextInput: 
+                id: username2
+                multiline: False
+                font_size: 13
+                size_hint: 0.55, 0.1
+                pos_hint: {"x":0.45, "top":0.9}
+            
+            BackgroundLabel: 
+                text: "Contact No.:"
+                font_size: 13
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.1
+                pos_hint: {"x":0, "top":0.8}
+            TextInput:
+                id: number
+                multiline: False
+                font_size: 13
+                size_hint: 0.55, 0.1
+                pos_hint: {"x":0.45, "top":0.8}
+            
+            BackgroundLabel: 
+                text: "Email:"
+                font_size: 13
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.1
+                pos_hint: {"x":0, "top":0.7}
+            TextInput: 
+                id: email
+                multiline: False
+                font_size: 13
+                size_hint: 0.55, 0.1
+                pos_hint: {"x":0.45, "top":0.7}
+            
+            BackgroundLabel: 
+                text: "Date of Birth:"
+                font_size: 13
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.1
+                pos_hint: {"x":0, "top":0.6}
+            TextInput: 
+                id: dob
+                multiline: False
+                font_size: 13
+                size_hint: 0.55, 0.1
+                pos_hint: {"x":0.45, "top":0.6}
+            
+            BackgroundLabel: 
+                text: "Password:"
+                font_size: 13
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.1
+                pos_hint: {"x":0, "top":0.5}
+            TextInput: 
+                id: password2
+                multiline: False
+                font_size: 13
+                size_hint: 0.55, 0.1
+                pos_hint: {"x":0.45, "top":0.5}
+            
+            BackgroundLabel: 
+                text: "Nationality:"
+                font_size: 13
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.1
+                pos_hint: {"x":0, "top":0.4}
+            TextInput: 
+                id: nationality
+                multiline: False
+                font_size: 13
+                size_hint: 0.55, 0.1
+                pos_hint: {"x":0.45, "top":0.4}
+            
+            BackgroundLabel: 
+                text: "Address:"
+                font_size: 13
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.1
+                pos_hint: {"x":0, "top":0.3}
+            TextInput: 
+                id: address
+                multiline: False
+                font_size: 13
+                size_hint: 0.55, 0.1
+                pos_hint: {"x":0.45, "top":0.3}
+            
+            BackgroundLabel: 
+                text: "ZIP/Postal Code:"
+                font_size: 13
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.1
+                pos_hint: {"x":0, "top":0.2}
+            TextInput: 
+                id: postcode
+                multiline: False
+                font_size: 13
+                size_hint: 0.55, 0.1
+                pos_hint: {"x":0.45, "top":0.2}
+            
+            BackgroundLabel: 
+                text: "Country:"
+                font_size: 13
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.45, 0.1
+                pos_hint: {"x":0, "top":0.1}
+            TextInput: 
+                id: country
+                multiline: False
+                font_size: 13
+                size_hint: 0.55, 0.1
+                pos_hint: {"x":0.45, "top":0.1}
+        
+        FloatLayout:
+            size_hint: 1, 0.03
+            pos_hint: {"x":0, "top":0.13}
+ 
+            TextInput:
+                multiline: False
+                size_hint: 0.03, 1
+                pos_hint: {"x":0, "top":1}
+            BackgroundLabel: 
+                text: "I agree with the terms and conditions"
+                font_size: 7
+                color: 0.02,0.02,0.02,1
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.3, 1
+                pos_hint: {"x":0.03, "top":1}
+            BackgroundLabel:
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.67, 1
+                pos_hint: {"x":0.33, "top":1}
+        
+        FloatLayout:
+            size_hint: 1, 0.1
+            pos_hint: {"x":0, "top":0.1}
+ 
+            BackgroundLabel:
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.25, 1
+                pos_hint: {"x":0, "top":1}
+            
+            Button:
+                text: "SUBMIT"
+                font_size: 26
+                color: 0.15,0.15,0.15,1
+                background_color: 1,1,1,1
+                size_hint: 0.5, 1
+                pos_hint: {"x":0.25, "top":1}
+                on_release: app.root.current = "Signupwelcome"
+            
+            BackgroundLabel:
+                background_color: 0.15,0.95,0.35,1
+                size_hint: 0.25, 1
+                pos_hint: {"x":0.75, "top":1}
+
+<Signupwelcome>
+    name: "Signupwelcome"
+
+    FloatLayout:
+        BackgroundLabel:
+            text: "Razer Buddy"
+            font_size: 45
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.5
+            pos_hint: {"x":0, "top":1}
+        BackgroundLabel:
+            text: "Welcome"
+            font_size: 35
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.07
+            pos_hint: {"x":0, "top":0.5}
+        BackgroundLabel:
+            text: "Dan low!"
+            font_size: 35
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.07
+            pos_hint: {"x":0, "top":0.43}
+        BackgroundLabel:
+            size_hint: 1, 0.29
+            pos_hint: {"x":0, "top":0.36}
+            background_color: 0.15,0.95,0.35,1
+        Button:
+            text: "Continue"
+            color: 0.15,0.15,0.15,1
+            font_size: 18
+            background_color: 1,1,1,1
+            size_hint: 1, 0.07
+            pos_hint: {"x":0, "top":0.07}
+            on_release: app.root.current = "Expenses"
+ 
+<Expenses>:
+    name: "Expenses"
+ 
+    FloatLayout:
+        BackgroundLabel:
+            size_hint: 1, 0.1
+            pos_hint: {"x":0, "top":1}
+            font_size: 24
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            text: "Expenses Tracker"
+ 
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0, "top":0.09}
+            font_size: 10
+            color: 0.08,1,0.35,1
+            background_color: 0.85,0.85,0.85,1
+            text: "Expense Tracker"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.25, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Razerpay"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.5, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Financial Guidance"
+            on_release: app.root.current = "Finance"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.75, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Me"
+            on_release: app.root.current = "Profile"
+ 
+<Razerpay>:
+    name: "Razerpay"
+ 
+    FloatLayout:
+        BackgroundLabel:
+            text: "Razer Wallet"
+            font_size: 24
+            color: 0.02,0.02,0.02,1           
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.6, 0.09
+            pos_hint: {"x":0, "top":1}
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.4, 0.09
+            pos_hint: {"x":0.6, "top":1}
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.21
+            pos_hint: {"x":0, "top":0.91}
+        
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.1, 0.3
+            pos_hint: {"x":0, "top":0.7}
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.8, 0.1
+            pos_hint: {"x":0.1, "top":0.6}
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.1, 0.3
+            pos_hint: {"x":0.9, "top":0.7}
+ 
+        Button:
+            text: "Scan"
+            font_size: 9
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            size_hint: 0.2, 0.1
+            pos_hint: {"x":0.1, "top":0.7}
+            on_release: 
+                app.root.current = "Scan"
+        Button:
+            text: "QRcode"
+            font_size: 9
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            size_hint: 0.2, 0.1
+            pos_hint: {"x":0.4, "top":0.7}
+            on_release: 
+                app.root.current = "QRcode"
+        Button:
+            text: "Transfer"
+            font_size: 9
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            size_hint: 0.2, 0.1
+            pos_hint: {"x":0.7, "top":0.7}
+            on_release: 
+                app.root.current = "Transfer"
+        Button:
+            text: "Transaction History"
+            font_size: 9
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            size_hint: 0.2, 0.1
+            pos_hint: {"x":0.1, "top":0.5}
+            on_release: 
+                app.root.current = "Transaction"
+        Button:
+            text: "Pocket"
+            font_size: 9
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            size_hint: 0.2, 0.1
+            pos_hint: {"x":0.4, "top":0.5}
+            on_release: 
+                app.root.current = "Pocket"
+        Button:
+            text: "Expenditure Summary"
+            font_size: 9
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            size_hint: 0.2, 0.1
+            pos_hint: {"x":0.7, "top":0.5}
+            on_release: 
+                app.root.current = "Expendituresum"
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.1, 0.1
+            pos_hint: {"x":0.3, "top":0.7}
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.1, 0.1
+            pos_hint: {"x":0.6, "top":0.7}
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.1, 0.1
+            pos_hint: {"x":0.3, "top":0.5}
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.1, 0.1
+            pos_hint: {"x":0.6, "top":0.5}
+        
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.31
+            pos_hint: {"x":0, "top":0.4}
+ 
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Expenses Tracker"
+            on_release: app.root.current = "Expenses"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.25, "top":0.09}
+            font_size: 10
+            color: 0.08,1,0.35,1
+            background_color: 0.85,0.85,0.85,1
+            text: "Razer Wallet"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.5, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Financial Guidance"
+            on_release: app.root.current = "Finance"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.75, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Me"
+            on_release: app.root.current = "Profile"
+ 
+<Scan>
+    name: "Scan"
+        
+    FloatLayout:
+        Button: 
+            background_color: 1,1,1,1
+            size_hint: 1, 0.05
+            pos_hint: {"x": 0, "top": 1}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Razerpay"
+                
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.08
+            pos_hint: {"x": 0, "top":0.95}
+            font_size: 20
+            color: 0.02, 0.02, 0.02, 1
+            text: "Scan"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.17
+            pos_hint: {"x": 0, "top":0.87}
+        
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.40
+            pos_hint: {"x": 0, "top":0.7}
+                
+        Button:
+            background_color: 1,1,1,1
+            size_hint: 0.90, 0.40
+            pos_hint: {"x": 0.05, "top":0.7}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "QR Code Scanner"
+            on_release: app.root.current = "Razerpay"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.40
+            pos_hint: {"x": 0.95, "top":0.7}
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.21
+            pos_hint: {"x": 0, "top":0.3}
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Expenses Tracker"
+            on_release: app.root.current = "Expenses"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.25, "top":0.09}
+            font_size: 10
+            color: 0.08,1,0.35,1
+            background_color: 0.85,0.85,0.85,1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Razerpay"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.5, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Financial Guidance"
+            on_release: app.root.current = "Finance"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.75, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Me"
+            on_release: app.root.current = "Profile"
+ 
+<QRcode>
+    name: "QRcode"
+        
+    FloatLayout:
+        Button: 
+            background_color: 1,1,1,1
+            size_hint: 1, 0.05
+            pos_hint: {"x": 0, "top": 1}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Razerpay"
+                
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.08
+            pos_hint: {"x":0, "top":0.95}
+            font_size: 13
+            color: 0.02, 0.02, 0.02, 1
+            text: "My QR code"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.17
+            pos_hint: {"x":0, "top":0.87}
+        
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.40
+            pos_hint: {"x":0, "top":0.7}
+                
+        Button:
+            background_color: 1,1,1,1
+            size_hint: 0.90, 0.40
+            pos_hint: {"x":0.05, "top":0.7}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "QR Code"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.40
+            pos_hint: {"x":0.95, "top":0.7}
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.21
+            pos_hint: {"x":0, "top":0.3}
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 0.95,0.95,0.95,1
+            text: "Expenses Tracker"
+            on_release: app.root.current = "Expenses"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.25, "top":0.09}
+            font_size: 10
+            color: 0.08,1,0.35,1
+            background_color: 0.85,0.85,0.85,1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Expenses"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.5, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 0.95,0.95,0.95,1
+            text: "Financial Guidance"
+            on_release: app.root.current = "Finance"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.75, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 0.95,0.95,0.95,1
+            text: "Me"
+            on_release: app.root.current = "Profile"
+
+ 
+<Transfer>
+    name: "Transfer"
+        
+    FloatLayout:
+        Button: 
+            background_color: 1,1,1,1
+            size_hint: 0.6, 0.09
+            pos_hint: {"x": 0, "top": 1}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Razerpay"
+ 
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.4, 0.09
+            pos_hint: {"x":0.6, "top":1}  
+ 
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.45, 0.11
+            pos_hint: {"x": 0, "top":0.91}
+            font_size: 13
+            color: 0.02, 0.02, 0.02, 1
+            text: "Transfer"
+        
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.55, 0.11
+            pos_hint: {"x": 0.45, "top":0.91}
+ 
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.1
+            pos_hint: {"x":0, "top":0.8} 
+        
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0, "top":0.7}
+                
+        Button:
+            background_color: 1,1,1,1
+            size_hint: 0.90, 0.1
+            pos_hint: {"x": 0.05, "top":0.7}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "Phone Contacts"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0.95, "top":0.7}
+        
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.05
+            pos_hint: {"x": 0, "top":0.6}
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0, "top":0.55}
+                
+        Button:
+            background_color: 1,1,1,1
+            size_hint: 0.90, 0.1
+            pos_hint: {"x": 0.05, "top":0.55}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "Razer Accounts"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0.95, "top":0.55}
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.36
+            pos_hint: {"x": 0, "top":0.45}
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Expenses Tracker"
+            on_release: app.root.current = "Expenses"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.25, "top":0.09}
+            font_size: 10
+            color: 0.08,1,0.35,1
+            background_color: 0.85,0.85,0.85,1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Expenses"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.5, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Financial Guidance"
+            on_release: app.root.current = "Finance"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.75, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Me"
+            on_release: app.root.current = "Profile"
+<Pocket>
+    name: "Pocket"
+        
+    FloatLayout:
+        Button: 
+            background_color: 1,1,1,1
+            size_hint: 0.6, 0.09
+            pos_hint: {"x": 0, "top": 1}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Razerpay"
+ 
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.4, 0.09
+            pos_hint: {"x":0.6, "top":1}  
+ 
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.45, 0.11
+            pos_hint: {"x": 0, "top":0.91}
+            font_size: 13
+            color: 0.02, 0.02, 0.02, 1
+            text: "Pocket"
+        
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.55, 0.11
+            pos_hint: {"x": 0.45, "top":0.91}
+ 
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.1
+            pos_hint: {"x":0, "top":0.8} 
+        
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0, "top":0.7}
+                
+        Button:
+            background_color: 1,1,1,1
+            size_hint: 0.90, 0.1
+            pos_hint: {"x": 0.05, "top":0.7}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "My Cards"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0.95, "top":0.7}
+        
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.05
+            pos_hint: {"x": 0.95, "top":0.6}
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0, "top":0.55}
+                
+        Button:
+            background_color: 1,1,1,1
+            size_hint: 0.90, 0.1
+            pos_hint: {"x": 0.05, "top":0.55}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "My Coupons"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0.95, "top":0.55}
+ 
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.05
+            pos_hint: {"x": 0, "top":0.45}
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0, "top":0.4}
+                
+        Button:
+            background_color: 1,1,1,1
+            size_hint: 0.90, 0.1
+            pos_hint: {"x": 0.05, "top":0.4}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "Top-Up Wallet"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0.95, "top":0.4}               
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.21
+            pos_hint: {"x": 0, "top":0.3}
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Expenses Tracker"
+            on_release: app.root.current = "Expenses"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.25, "top":0.09}
+            font_size: 10
+            color: 0.08,1,0.35,1
+            background_color: 0.85,0.85,0.85,1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Expenses"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.5, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Financial Guidance"
+            on_release: app.root.current = "Finance"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.75, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Me"
+            on_release: app.root.current = "Profile"
+ 
+<Transaction>:
+    name: "Transaction"
+ 
+    FloatLayout:
+        Button:
+            text: "Razer Wallet"
+            font_size: 24
+            color: 0.02,0.02,0.02,1
+            background_color: 1,1,1,1
+            size_hint: 0.65, 0.13
+            pos_hint: {"x":0, "top":1}
+            on_release: app.root.current = "Razerpay"
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.35, 0.13
+            pos_hint: {"x":0.65, "top":1}
+        BackgroundLabel: 
+            text: "Transaction History"
+            font_size: 20
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.9, 0.07
+            pos_hint: {"x":0, "top":0.87}
+        BackgroundLabel: 
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.1, 0.07
+            pos_hint: {"x":0.9, "top":0.87}
+        BackgroundLabel: 
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.71
+            pos_hint: {"x":0, "top":0.8}
+        
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Expenses Tracker"
+            on_release: 
+                app.root.current = "Expenses"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.25, "top":0.09}
+            font_size: 10
+            color: 0.08,1,0.35,1
+            background_color: 0.85,0.85,0.85,1
+            text: "Razer Wallet"
+            on_release: 
+                app.root.current = "Razerpay"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.5, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Financial Guidance"
+            on_release: 
+                app.root.current = "Finance"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.75, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Me"
+            on_release: 
+                app.root.current = "Profile"
+ 
+<Expendituresum>:
+    name: "Expendituresum"
+ 
+    FloatLayout:
+        Button:
+            text: "Razer Wallet"
+            font_size: 24
+            color: 0.02,0.02,0.02,1
+            background_color: 1,1,1,1
+            size_hint: 0.65, 0.13
+            pos_hint: {"x":0, "top":1}
+            on_release: app.root.current = "Razerpay"
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.35, 0.13
+            pos_hint: {"x":0.65, "top":1}
+        BackgroundLabel: 
+            text: "Expenditure Summary"
+            font_size: 20
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.93, 0.07
+            pos_hint: {"x":0, "top":0.87}
+        BackgroundLabel: 
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.07, 0.07
+            pos_hint: {"x":0.93, "top":0.87}
+        BackgroundLabel: 
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.71
+            pos_hint: {"x":0, "top":0.8}
+        
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Expenses Tracker"
+            on_release: 
+                app.root.current = "Expenses"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.25, "top":0.09}
+            font_size: 10
+            color: 0.08,1,0.35,1
+            background_color: 0.85,0.85,0.85,1
+            text: "Razer Wallet"
+            on_release: 
+                app.root.current = "Razerpay"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.5, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Financial Guidance"
+            on_release: 
+                app.root.current = "Finance"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.75, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Me"
+            on_release: 
+                app.root.current = "Profile"
+ 
+<Finance>:
+    name: "Finance"
+
+    FloatLayout: 
+        BackgroundLabel: 
+            text: "Financial Guidance"
+            font_size: 24
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.9, 0.1
+            pos_hint: {"x":0, "top":1}
+        BackgroundLabel: 
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.1, 0.1
+            pos_hint: {"x":0.9, "top":1}
+ 
+        BackgroundLabel: 
+            text: "Forum"
+            font_size: 20
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.43, 0.1
+            pos_hint: {"x":0, "top":0.9}
+        BackgroundLabel: 
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.57, 0.1
+            pos_hint: {"x":0.43, "top":0.9}
+        
+        FloatLayout:
+            size_hint: 1, 0.3
+            pos_hint: {"x":0, "top":0.8}
+ 
+            BackgroundLabel:
+                background_color: 0.15, 0.95, 0.35, 1
+                size_hint: 0.05, 0.2
+                pos_hint: {"x": 0, "top":1}
+                
+            Button:
+                background_color: 1,1,1,1
+                size_hint: 0.90, 0.2
+                pos_hint: {"x": 0.05, "top":1}
+                font_size: 10
+                color: 0.15, 0.15, 0.15, 1
+                text: "Most Trending"
+                
+            BackgroundLabel:
+                background_color: 0.15, 0.95, 0.35, 1
+                size_hint: 0.05, 0.2
+                pos_hint: {"x": 0, "top":1}
+        
+            BackgroundLabel:
+                background_color: 0.15, 0.95, 0.35, 1
+                size_hint: 1, 0.1
+                pos_hint: {"x": 0, "top":0.8}
+                
+            BackgroundLabel:
+                background_color: 0.15, 0.95, 0.35, 1
+                size_hint: 0.05, 0.2
+                pos_hint: {"x": 0, "top":0.7}
+                
+            Button:
+                background_color: 1,1,1,1
+                size_hint: 0.90, 0.2
+                pos_hint:{"x": 0.05, "top":0.7}
+                font_size: 10
+                color: 0.15, 0.15, 0.15, 1
+                text: "Razer Bank"
+                
+            BackgroundLabel:
+                background_color: 0.15, 0.95, 0.35, 1
+                size_hint: 0.05, 0.2
+                pos_hint: {"x": 0.95, "top":0.7}
+ 
+            BackgroundLabel:
+                background_color: 0.15, 0.95, 0.35, 1
+                size_hint: 1, 0.1
+                pos_hint: {"x": 0, "top":0.5}
+                
+            BackgroundLabel:
+                background_color: 0.15, 0.95, 0.35, 1
+                size_hint: 0.05, 0.2
+                pos_hint: {"x": 0, "top":0.4}
+                
+            Button:
+                background_color: 1,1,1,1
+                size_hint: 0.90, 0.2
+                pos_hint: {"x": 0.05, "top":0.4}
+                font_size: 10
+                color: 0.15, 0.15, 0.15, 1
+                text: "My Activities"
+                
+            BackgroundLabel:
+                background_color: 0.15, 0.95, 0.35, 1
+                size_hint: 0.05, 0.2
+                pos_hint: {"x": 0.95, "top":0.4}
+                
+            BackgroundLabel:
+                background_color: 0.15, 0.95, 0.35, 1
+                size_hint: 1, 0.2
+                pos_hint: {"x": 0, "top":0.2}
+        
+        BackgroundLabel: 
+            text: "Topics"
+            font_size: 20
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.43, 0.1
+            pos_hint: {"x":0, "top":0.5}
+        BackgroundLabel: 
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.57, 0.1
+            pos_hint: {"x":0.43, "top":0.5}
+ 
+        FloatLayout: 
+            size_hint: 1, 0.31
+            pos_hint: {"x":0, "top":0.4}
+ 
+            BackgroundLabel: 
+                size_hint: 0.05, 1
+                pos_hint: {"x":0, "top":1}
+                background_color: 0.15,0.95,0.35,1
+            GridLayout:
+                cols: 2
+                size_hint: 0.9, 1
+                pos_hint: {"x":0.05, "top":1}
+ 
+                Button:
+                    text: "Investments"
+                    background_color: 1,1,1,1
+                    color: 0.02,0.02,0.02,1
+                    font_size: 10
+                    on_release: app.root.current = "Investmenttopics"
+                Button:
+                    text: "Insurance"
+                    background_color: 1,1,1,1
+                    color: 0.02,0.02,0.02,1
+                    font_size: 10
+                Button:
+                    text: "Savings"
+                    background_color: 1,1,1,1
+                    color: 0.02,0.02,0.02,1
+                    font_size: 10
+                Button:
+                    text: "Bonds"
+                    background_color: 1,1,1,1
+                    color: 0.02,0.02,0.02,1
+                    font_size: 10
+                Button:
+                    text: "Lorem Ipsum"
+                    background_color: 1,1,1,1
+                    color: 0.02,0.02,0.02,1
+                    font_size: 10
+                Button:
+                    text: "Lorem Ipsum"
+                    background_color: 1,1,1,1
+                    color: 0.02,0.02,0.02,1
+                    font_size: 10
+            BackgroundLabel: 
+                size_hint: 0.05, 1
+                pos_hint: {"x":0.95, "top":1}
+                background_color: 0.15,0.95,0.35,1
+ 
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Expenses Tracker"
+            on_release: app.root.current = "Expenses"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.25, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Razerpay"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.5, "top":0.09}
+            font_size: 10
+            color: 0.08,1,0.35,1
+            background_color: 0.85,0.85,0.85,1
+            text: "Financial Guidance"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.75, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Me"
+            on_release: app.root.current = "Profile"
+ 
+<Profile>:
+    name: "Profile"
+ 
+    FloatLayout:
+        BackgroundLabel:
+            size_hint: 1, 0.1
+            pos_hint: {"x":0, "top":1}
+            font_size: 10
+            color: 0.02,0.02,0.02,1
+            background_color: 0.15,0.95,0.35,1
+            text: "Me"
+ 
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Expenses Tracker"
+            on_release: app.root.current = "Expenses"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.25, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Razerpay"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.5, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Financial Guidance"
+            on_release: app.root.current = "Finance"
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.75, "top":0.09}
+            font_size: 10
+            color: 0.08,1,0.35,1
+            background_color: 0.85,0.85,0.85,1
+            text: "Me"
+ 
+
+<Investmenttopics>
+    name: "Investmenttopics"
+        
+    FloatLayout:
+        Button: 
+            background_color: 1,1,1,1
+            size_hint: 0.6, 0.09
+            pos_hint: {"x": 0, "top": 1}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "Topics"
+            on_release: app.root.current = "Finance"
+ 
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.4, 0.09
+            pos_hint: {"x":0.6, "top":1}  
+ 
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 0.45, 0.11
+            pos_hint: {"x": 0, "top":0.91}
+            font_size: 13
+            color: 0.02, 0.02, 0.02, 1
+            text: "Investments"
+        
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.55, 0.11
+            pos_hint: {"x": 0, "top":0.91}
+ 
+        BackgroundLabel:
+            background_color: 0.15,0.95,0.35,1
+            size_hint: 1, 0.1
+            pos_hint: {"x":0, "top":0.8} 
+        
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0, "top":0.7}
+                
+        Button:
+            background_color: 1,1,1,1
+            size_hint: 0.90, 0.1
+            pos_hint: {"x": 0.05, "top":0.7}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "I'm New"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0.95, "top":0.7}
+        
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.05
+            pos_hint: {"x": 0.95, "top":0.6}
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0, "top":0.6}
+                
+        Button:
+            background_color: 1,1,1,1
+            size_hint: 0.90, 0.1
+            pos_hint: {"x": 0.05, "top":0.6}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "Intermediate but still need guidance"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0.95, "top":0.6}
+ 
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.05
+            pos_hint: {"x": 0.95, "top":0.5}
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0, "top":0.45}
+                
+        Button:
+            background_color: 1,1,1,1
+            size_hint: 0.90, 0.1
+            pos_hint: {"x": 0.05, "top":0.45}
+            font_size: 24
+            color: 0.15, 0.15, 0.15, 1
+            text: "I know what I am doing"
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 0.05, 0.1
+            pos_hint: {"x": 0.95, "top":0.45}              
+                
+        BackgroundLabel:
+            background_color: 0.15, 0.95, 0.35, 1
+            size_hint: 1, 0.36
+            pos_hint: {"x": 0, "top":0.45}
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Expenses Tracker"
+            on_release: app.root.current = "Expenses"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.25, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Razer Wallet"
+            on_release: app.root.current = "Razerpay"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.5, "top":0.09}
+            font_size: 10
+            color: 0.08,1,0.35,1
+            background_color: 0.85,0.85,0.85,1 
+            text: "Financial Guidance"
+            on_release: app.root.current = "Finance"
+                
+        Button:
+            size_hint: 0.25, 0.09
+            pos_hint: {"x":0.75, "top":0.09}
+            font_size: 10
+            color: 0.15,0.15,0.15,1
+            background_color: 1,1,1,1
+            text: "Me"
+            on_release: app.root.current = "Profile"
